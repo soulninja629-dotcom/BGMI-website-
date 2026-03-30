@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔥 BGMI Pro Website</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: linear-gradient(135deg,#1e272e,#485460);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+}
+
+.box {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+button {
+    background: #00cec9;
+    color: black;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #00b894;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎮 BGMI PRO HUB</h1>
+
+<!-- LOGIN -->
+<div class="box">
+<h2>🔐 Login</h2>
+<input type="text" id="name" placeholder="Enter your name">
+<button onclick="login()">Login</button>
+<p id="welcome"></p>
+</div>
+
+<!-- SENSITIVITY CALCULATOR -->
+<div class="box">
+<h2>🎯 Sensitivity Calculator</h2>
+<input type="number" id="dpi" placeholder="Enter DPI">
+<button onclick="calc()">Calculate</button>
+<p id="result"></p>
+</div>
+
+<!-- UC SHOP -->
+<div class="box">
+<h2>💰 UC Shop</h2>
+<p>60 UC - ₹75</p>
+<p>325 UC - ₹420</p>
+<p>660 UC - ₹800</p>
+<button onclick="buy()">Buy Now</button>
+<p id="buymsg"></p>
+</div>
+
+</div>
+
+<script>
+
+// LOGIN
+function login() {
+    let name = document.getElementById("name").value;
+    document.getElementById("welcome").innerText = "Welcome " + name + " 🔥";
+}
+
+// SENSITIVITY
+function calc() {
+    let dpi = document.getElementById("dpi").value;
+    let sens = dpi * 0.5;
+    document.getElementById("result").innerText = "Recommended Sensitivity: " + sens;
+}
+
+// BUY
+function buy() {
+    document.getElementById("buymsg").innerText = "Order placed! Contact on WhatsApp 📲";
+}
+
+</script>
+
+</body>
+</html>
